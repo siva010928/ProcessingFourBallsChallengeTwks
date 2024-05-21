@@ -25,7 +25,7 @@ public class FourBallsChallenge extends PApplet {
         for (int i = 0; i < balls.length; i++) {
             float yPos = (float) ((i + 1) * BALL_HEIGHT) / 5;
             int speed = i + 1;
-            balls[i] = new Ball(this, yPos, speed);
+            balls[i] = new Ball(yPos, speed);
         }
     }
 
@@ -33,7 +33,7 @@ public class FourBallsChallenge extends PApplet {
     public void draw() {
         for (Ball ball : balls) {
             ball.move();
-            ball.display();
+            ball.display(this);
         }
     }
 }
